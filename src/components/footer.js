@@ -117,17 +117,6 @@ export default function Footer(props) {
                 </li>
               ))}
           </FlexList>
-          <Space />
-          <FlexList>
-            {meta &&
-              meta.map((link) => (
-                <li key={link.id}>
-                  <NavLink to={link.href}>
-                    <Text variant="small">{link.text}</Text>
-                  </NavLink>
-                </li>
-              ))}
-          </FlexList>
         </Flex>
       </Container>
       <Space size={3} />
