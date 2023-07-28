@@ -50,7 +50,7 @@ const data = {
 }
 
 export default function Header() {
-  const { navItems, cta } = data
+  const { navItems } = data
   const [isOpen, setOpen] = React.useState(false)
 
   React.useEffect(() => {
