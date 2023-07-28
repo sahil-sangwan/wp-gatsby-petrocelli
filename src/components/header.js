@@ -69,7 +69,7 @@ export default function Header() {
           <NavLink to="/">
             <VisuallyHidden>Home</VisuallyHidden>
             // <BrandLogo />
-            <img src="src/components/LogoFinalWeb.jpg" />
+            <StaticImage src="src/components/LogoFinalWeb.jpg" />
           </NavLink>
           <nav>
             <FlexList gap={4}>
