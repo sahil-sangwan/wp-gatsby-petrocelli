@@ -92,7 +92,7 @@ export default function Header() {
           >
             <NavLink to="/">
               <VisuallyHidden>Home</VisuallyHidden>
-              <BrandLogo />
+              // <BrandLogo />
             </NavLink>
           </span>
           <Flex>
