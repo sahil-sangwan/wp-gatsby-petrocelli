@@ -4,8 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 export default function GatsbyWordpressLogo() {
   return (
     <StaticImage src="./LogoFinalWeb.jpg" 
-      width="82"
-      height="24" 
+      width="897"
+      height="343" 
     />
   //   <svg
   //     width="82"
