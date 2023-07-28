@@ -1,8 +1,9 @@
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function GatsbyWordpressLogo() {
   return (
-    <img src="./LogoFinalWeb.jpg" 
+    <StaticImage src="./LogoFinalWeb.jpg" 
       width="82"
       height="24" 
     />
