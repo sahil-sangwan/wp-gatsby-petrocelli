@@ -25,25 +25,25 @@ const data = {
     {
       id: 0,
       navItemType: "Link",
-      href: "services",
+      href: "/services",
       text: "Services",
     },
     {
       id: 1,
       navItemType: "Link",
-      href: "about",
+      href: "/about",
       text: "About",
     },
     {
       id: 2,
       navItemType: "Link",
-      href: "staff",
+      href: "/staff",
       text: "Staff",
     },
     {
       id: 3,
       navItemType: "Link",
-      href: "contact",
+      href: "/contact",
       text: "Contact",
     },
   ],
@@ -68,7 +68,8 @@ export default function Header() {
         <Flex variant="spaceBetween">
           <NavLink to="/">
             <VisuallyHidden>Home</VisuallyHidden>
-            <BrandLogo />
+            // <BrandLogo />
+            <img src="src/components/LogoFinalWeb.jpg">
           </NavLink>
           <nav>
             <FlexList gap={4}>
