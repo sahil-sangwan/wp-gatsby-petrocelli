@@ -323,30 +323,12 @@ exports.onCreateNode = ({
         const {
           description,
           hero,
-          logoList,
-          featureList,
-          productList,
           benefitList,
-          statList,
           testimonialList,
           cta,
         } = node.homepage
 
         const content = {
-          features: [featureList.feature1, featureList.feature2]
-            .filter(Boolean)
-            .map((feature) => ({
-              ...feature,
-              blocktype: "Feature",
-            }))
-            .map(createItemNode(node, "HomepageFeature")),
-          products: [
-            productList.product1,
-            productList.product2,
-            productList.product3,
-          ]
-            .filter(Boolean)
-            .map(createItemNode(node, "HomepageProduct")),
           benefits: [
             benefitList.benefit1,
             benefitList.benefit2,
@@ -354,9 +336,6 @@ exports.onCreateNode = ({
           ]
             .filter(Boolean)
             .map(createItemNode(node, "HomepageBenefit")),
-          stats: [statList.stat1, statList.stat2, statList.stat3]
-            .filter(Boolean)
-            .map(createItemNode(node, "HomepageStat")),
           testimonials: [
             testimonialList.testimonial1,
             testimonialList.testimonial2,
@@ -376,33 +355,10 @@ exports.onCreateNode = ({
               .filter(Boolean)
               .map(createLinkNode(node.id)),
           },
-          logoList: {
-            id: createNodeId(`${node.id} >>> HomepageLogoList`),
-            ...logoList,
-            logos: logoList.logos?.filter(Boolean).map((logo) => logo.id) || [],
-          },
-          featureList: {
-            id: createNodeId(`${node.id} >>> HomepageFeatureList`),
-            ...featureList,
-            content: content.features,
-          },
-          productList: {
-            id: createNodeId(`${node.id} >>> HomepageProductList`),
-            ...productList,
-            content: content.products,
-          },
           benefitList: {
             id: createNodeId(`${node.id} >>> HomepageBenefitList`),
             ...benefitList,
             content: content.benefits,
-          },
-          statList: {
-            id: createNodeId(`${node.id} >>> HomepageStatList`),
-            ...statList,
-            image: statList.image?.id,
-            icon: statList.icon?.id,
-            links: [statList.link].filter(Boolean).map(createLinkNode(node.id)),
-            content: content.stats,
           },
           testimonialList: {
             id: createNodeId(`${node.id} >>> HomepageTestimonialList`),
@@ -429,46 +385,10 @@ exports.onCreateNode = ({
         })
 
         actions.createNode({
-          ...blocks.logoList,
-          blocktype: "HomepageLogoList",
-          internal: {
-            type: "HomepageLogoList",
-            contentDigest: node.internal.contentDigest,
-          },
-        })
-
-        actions.createNode({
-          ...blocks.featureList,
-          blocktype: "HomepageFeatureList",
-          internal: {
-            type: "HomepageFeatureList",
-            contentDigest: node.internal.contentDigest,
-          },
-        })
-
-        actions.createNode({
-          ...blocks.productList,
-          blocktype: "HomepageProductList",
-          internal: {
-            type: "HomepageProductList",
-            contentDigest: node.internal.contentDigest,
-          },
-        })
-
-        actions.createNode({
           ...blocks.benefitList,
           blocktype: "HomepageBenefitList",
           internal: {
             type: "HomepageBenefitList",
-            contentDigest: node.internal.contentDigest,
-          },
-        })
-
-        actions.createNode({
-          ...blocks.statList,
-          blocktype: "HomepageStatList",
-          internal: {
-            type: "HomepageStatList",
             contentDigest: node.internal.contentDigest,
           },
         })
@@ -504,11 +424,7 @@ exports.onCreateNode = ({
           image: node.featuredImage?.node?.id,
           content: [
             blocks.hero.id,
-            blocks.logoList.id,
-            blocks.productList.id,
-            blocks.featureList.id,
             blocks.benefitList.id,
-            blocks.statList.id,
             blocks.testimonialList.id,
             blocks.cta.id,
           ],
