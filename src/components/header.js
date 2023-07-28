@@ -25,32 +25,28 @@ const data = {
     {
       id: 0,
       navItemType: "Link",
-      href: "#!",
-      text: "Products",
+      href: "services",
+      text: "Services",
     },
     {
       id: 1,
       navItemType: "Link",
-      href: "#!",
-      text: "Pricing",
+      href: "about",
+      text: "About",
     },
     {
       id: 2,
       navItemType: "Link",
-      href: "#!",
-      text: "About",
+      href: "staff",
+      text: "Staff",
     },
     {
       id: 3,
       navItemType: "Link",
-      href: "#!",
-      text: "Blog",
+      href: "contact",
+      text: "Contact",
     },
   ],
-  cta: {
-    href: "#!",
-    text: "Sign Up",
-  },
 }
 
 export default function Header() {
