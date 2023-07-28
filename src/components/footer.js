@@ -1,11 +1,7 @@
 import * as React from "react"
 import {
-  Twitter,
-  Twitch,
-  Instagram,
+  Linkedin,
   Facebook,
-  Youtube,
-  GitHub,
 } from "react-feather"
 import {
   Container,
@@ -21,13 +17,8 @@ import {
 import BrandLogo from "./brand-logo"
 
 const socialMedia = {
-  TWITTER: {
-    url: "https://twitter.com",
-    name: "Twitter",
-    icon: <Twitter />,
-  },
-  INSTAGRAM: {
-    url: "https://instagram.com",
+  LINKEDIN: {
+    url: "https://linkedin.com",
     name: "Instagram",
     icon: <Instagram />,
   },
@@ -35,21 +26,6 @@ const socialMedia = {
     url: "https://facebook.com",
     name: "Facebook",
     icon: <Facebook />,
-  },
-  YOUTUBE: {
-    url: "https://youtube.com",
-    name: "YouTube",
-    icon: <Youtube />,
-  },
-  GITHUB: {
-    url: "https://github.com",
-    name: "GitHub",
-    icon: <GitHub />,
-  },
-  TWITCH: {
-    url: "https://twitch.tv",
-    name: "Twitch",
-    icon: <Twitch />,
   },
 }
 
@@ -71,68 +47,39 @@ const data = {
   links: [
     {
       id: 0,
-      href: "#!",
-      text: "Products",
+      href: "/services",
+      text: "Services",
     },
     {
       id: 1,
-      href: "#!",
-      text: "Pricing",
-    },
-    {
-      id: 2,
-      href: "#!",
+      href: "/about",
       text: "About",
     },
     {
+      id: 2,
+      href: "/staff",
+      text: "Staff",
+    },
+    {
       id: 3,
-      href: "#!",
-      text: "Blog",
-    },
-  ],
-  meta: [
-    {
-      id: 0,
-      href: "/terms",
-      text: "Terms",
-    },
-    {
-      id: 1,
-      href: "/privacy",
-      text: "Privacy Policy",
+      href: "/contact",
+      text: "Contact",
     },
   ],
   socialLinks: [
     {
-      service: "TWITTER",
-      username: "gatsbyjs",
-    },
-    {
-      service: "INSTAGRAM",
-      username: "gatsbyjs",
-    },
-    {
-      service: "GITHUB",
+      service: "LINKEDIN",
       username: "gatsbyjs",
     },
     {
       service: "FACEBOOK",
       username: "gatsbyjs",
     },
-    {
-      service: "YOUTUBE",
-      username: "gatsbyjs",
-    },
-    {
-      service: "TWITCH",
-      username: "gatsbyjs",
-    },
   ],
-  copyright: "© 2022 Gatsby Inc. All rights reserved",
 }
 
 export default function Footer(props) {
-  const { links, meta, socialLinks, copyright } = data
+  const { links, socialLinks } = data
 
   return (
     <Box as="footer" paddingY={4}>
@@ -181,7 +128,6 @@ export default function Footer(props) {
                 </li>
               ))}
           </FlexList>
-          <Text variant="small">{copyright}</Text>
         </Flex>
       </Container>
       <Space size={3} />
