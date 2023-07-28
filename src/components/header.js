@@ -80,7 +80,6 @@ export default function Header() {
                 ))}
             </FlexList>
           </nav>
-          <div>{cta && <Button to={cta.href}>{cta.text}</Button>}</div>
         </Flex>
       </Container>
       <Container className={mobileHeaderNavWrapper[isOpen ? "open" : "closed"]}>
@@ -98,13 +97,6 @@ export default function Header() {
           </span>
           <Flex>
             <Space />
-            <div>
-              {cta && (
-                <Button to={cta.href} variant={isOpen ? "reversed" : "primary"}>
-                  {cta.text}
-                </Button>
-              )}
-            </div>
             <Nudge right={3}>
               <InteractiveIcon
                 title="Toggle menu"
