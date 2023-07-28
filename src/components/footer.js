@@ -19,8 +19,8 @@ import BrandLogo from "./brand-logo"
 const socialMedia = {
   LINKEDIN: {
     url: "https://linkedin.com",
-    name: "Instagram",
-    icon: <Instagram />,
+    name: "LinkedIn",
+    icon: <Linkedin />,
   },
   FACEBOOK: {
     url: "https://facebook.com",
