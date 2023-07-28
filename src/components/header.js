@@ -67,8 +67,9 @@ export default function Header() {
         <Space size={2} />
         <Flex variant="spaceBetween">
           <NavLink to="/">
-            <VisuallyHidden>Home</VisuallyHidden>
-            <BrandLogo />
+            Home 
+            // <VisuallyHidden>Home</VisuallyHidden>
+            // <BrandLogo />
           </NavLink>
           <nav>
             <FlexList gap={4}>
